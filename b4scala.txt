@@ -1,0 +1,15 @@
+import scala.io.StdIn.readInt
+
+object EvenOddCheck {
+  def main(args: Array[String]): Unit = {
+
+    print("Enter a number: ")
+    val number = readInt()
+
+    if (number % 2 == 0) {
+      println(s"$number is even")
+    } else {
+      println(s"$number is odd")
+    }
+  }
+}

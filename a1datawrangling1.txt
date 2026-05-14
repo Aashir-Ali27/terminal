@@ -1,0 +1,26 @@
+import pandas as pd
+import numpy as np
+
+df=pd.read_csv('iris.csv')
+df.describe() # Print description of DataFrame
+
+print("First 5 values:\n", df.head())
+print ("Last 5 values:\n", df.tail())
+
+df.duplicated()
+
+df.isnull()
+
+df.info()
+
+df.shape
+
+df["sepal.length"].isnull()
+
+y = df.drop(["petal.length"], axis=1) # axis=1 column. For row, axis=0
+print(y)
+
+df['variety'].replace(['Setosa', 'Virginica'], [0,1], inplace=True)
+print(df)
+
+df.isnull().sum()

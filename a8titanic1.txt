@@ -1,0 +1,43 @@
+import seaborn as sns
+from matplotlib import pyplot as plt
+
+
+df=sns.load_dataset('titanic')
+df.head()
+
+
+plt.figure(figsize=(6,4))
+sns.displot(df['age']) # Use sns.distplot(df['age']) for older versions of seaborn library
+plt.show()
+
+
+plt.figure(figsize=(5,3))
+bp = sns.boxplot(x='class',y='age',palette='pastel',data=df)
+plt.show()
+df.describe().transpose()
+
+
+
+plt.figure(figsize=(5,4))
+vp = sns.violinplot(x='class',y='age',palette='rainbow',data=df)
+plt.show()
+
+
+
+plt.figure(figsize=(5,4))
+pq = sns.histplot(x='fare',bins=10,data=df,hue='survived',kde=False)
+for i in pq.containers:
+  pq.bar_label(i)
+plt.show()
+
+
+
+plt.figure(figsize=(5,4))
+st=sns.scatterplot(x='age',y='fare',data=df)
+plt.show()
+
+
+
+plt.figure(figsize=(5,4))
+kl=sns.scatterplot(x='age',y='fare',data=df,hue='survived')
+plt.show()

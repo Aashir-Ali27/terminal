@@ -1,0 +1,21 @@
+wsl --install -d Ubuntu
+
+wsl
+
+
+sudo apt update
+sudo apt install openjdk-17-jdk -y
+
+
+java -version
+
+
+sudo apt install scala -y
+
+
+scala -version
+
+
+nano Hello.scala
+scalac Hello.scala
+scala Hello

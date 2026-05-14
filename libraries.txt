@@ -1,0 +1,3 @@
+pip install pandas numpy seaborn matplotlib
+pip install -U scikit-learn
+pip install nltk
